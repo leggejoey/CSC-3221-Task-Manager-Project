@@ -8,6 +8,7 @@ let finishList = [];
 const result = document.querySelector("#list-container");
 const input =  document.querySelector("#new");
 const addButton = document.querySelector("#add");
+const crossButton = document.querySelector("#cross");
 
 // Listeners
 
@@ -45,6 +46,31 @@ result.addEventListener("click", async (e)=>{
                 throw new Error(resp.error);
 
             theList.splice(id, 1);
+            ShowList();
+        }
+        catch (err) {
+            console.error("Failed to delete item: ", err);
+        }
+    }
+    /**
+     * Will have to clone object to ensure synchronization between client and server.
+     * (Reason: moving before checking, if the server fails, will desync the two)
+     * (Reason: the check off is only client side.)
+     */
+    else if(e.target.id === "cross"){
+        let id = parseInt(e.target.parentNode.id);
+        let clone = structuredClone(e.target.parentNode);
+
+        try {
+            const resp = await http.delete({ path: `/api/${id}` });
+
+            if (resp.error)
+                throw new Error(resp.error);
+
+            theList.splice(id, 1);
+            //single change.
+            finishList.push(clone);
+            console.log(`Pushed object into finalized list, DATA:\n ${clone}`);
             ShowList();
         }
         catch (err) {
@@ -97,6 +123,11 @@ function ShowList() {
                     <rect x="23" y="16" width="5" height="30" rx="3" ry="3" fill="#ffffff" />
                     <rect x="32" y="16" width="5" height="30" rx="3" ry="3" fill="#ffffff" />
                 </svg>
+
+                <svg id="cross" class="item-button" tabindex="0">
+                    <path d="M 0 10 L 25 10"/>
+                </svg>
+
             </div>`;
 
         id++;
