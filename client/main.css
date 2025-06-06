@@ -95,6 +95,14 @@ input {
     padding: 8px 0px;
 }
 
+#done {
+    border: none;
+
+    width: 100%;
+    margin: 0px 16px 0px 0px;
+    padding: 8px 0px;
+}
+
 #add {
     aspect-ratio: 1;
 }
