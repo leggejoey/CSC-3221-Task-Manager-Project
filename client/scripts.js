@@ -2,7 +2,7 @@ const http = new jemHTTP("");
 
 // Block Variables
 let theList = [];
-let taskList = [];
+let finishList = [];
 
 // setup selectors
 const result = document.querySelector("#list-container");
