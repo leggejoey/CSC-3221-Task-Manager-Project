@@ -1,0 +1,10 @@
+<svg width="37" height="27" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <text stroke-dasharray="—" xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="24" id="svg_1" y="21" x="2.84999" stroke-width="0" stroke="#000" fill="#000000">abc</text>
+  <path id="svg_2" d="m39,14" opacity="undefined" stroke-dasharray="—" stroke="#000" fill="none"/>
+  <line stroke-width="32" id="svg_3" y2="229" x2="618" y1="229" x1="623" stroke-dasharray="—" stroke="#000" fill="none"/>
+  <line stroke-width="3" id="svg_4" y2="14" x2="35.5" y1="14" x1="1.5" stroke-dasharray="—" stroke="#000" fill="none"/>
+ </g>
+</svg>

@@ -111,6 +111,24 @@ input {
     background-color: #ddd;
 }
 
+
+
+#cross {
+    aspect-ratio: 1;
+}
+
+#cross > path {
+    fill: none;
+    stroke: black;
+    stroke-width: 2;
+}
+
+#cross:hover {
+    cursor: pointer;
+
+    background-color: #ddd;
+}
+
 #item:active {
      border: none;
 }
