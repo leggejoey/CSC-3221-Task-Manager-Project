@@ -1,0 +1,121 @@
+body {
+    margin: 0px auto;
+
+    width: auto;
+    max-width: 600px;
+    padding: 0px 32px;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: sans-serif;
+}
+
+path, rect {
+    fill: black;
+
+    pointer-events: none;
+}
+
+input {
+    border-radius: 2px;
+}
+
+.card {
+    padding: 16px;
+
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.item {
+    border: solid lightgray 4px;
+
+    user-select: none;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.item:has(#drag:hover) {
+    background-color: #ddd;
+}
+
+.new-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-button {
+    height: auto;
+    width: 24px;
+
+    padding: 8px;
+    border-radius: 4px;
+
+    background: transparent;
+    background-color: transparent;
+}
+
+.item-button:active {
+    transform: scale(1.2);
+}
+
+#drag {
+    align-items: start;
+}
+
+#drag:hover {
+    cursor: grab;
+}
+
+#delete:hover {
+    cursor: pointer;
+
+    background-color: #ddd;
+}
+
+#delete {
+    margin-right: 0px;
+}
+
+#item {
+    border: none;
+
+    width: 100%;
+
+    margin: 0px 16px 0px 0px;
+}
+
+#new {
+    border: none;
+
+    width: 100%;
+    margin: 0px 16px 0px 0px;
+    padding: 8px 0px;
+}
+
+#add {
+    aspect-ratio: 1;
+}
+
+#add > path {
+    fill: none;
+    stroke: black;
+    stroke-width: 2;
+}
+
+#add:hover {
+    cursor: pointer;
+
+    background-color: #ddd;
+}
+
+#item:active {
+     border: none;
+}
+
+#list-container {
+    display: grid;
+    gap: 12px;
+}
